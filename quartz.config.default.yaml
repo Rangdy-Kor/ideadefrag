@@ -219,7 +219,7 @@ plugins:
       priority: 25
       display: mobile-only
   - source: "@quartz-community/bases-page"
-    enabled: false
+    enabled: true
     options: {}
     order: 50
   - source: "@quartz-community/note-properties"
@@ -269,7 +269,8 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content: 
+      template: default
     folder:
       exclude:
         - reader-mode
@@ -280,5 +281,7 @@ layout:
         - reader-mode
       positions:
         right: []
-    canvas: {}
-    bases: {}
+    canvas: 
+      template: default
+    bases: 
+      template: default
