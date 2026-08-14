@@ -128,8 +128,12 @@ plugins:
     enabled: true
   - source: "@quartz-community/folder-page"
     enabled: true
+    options:
+      view: list
   - source: "@quartz-community/tag-page"
     enabled: true
+    options:
+      view: list
   - source: "@quartz-community/explorer"
     enabled: true
     layout:
@@ -258,7 +262,6 @@ plugins:
       priority: 50
       display: all
 layout:
-  template: obsidian
   groups:
     toolbar:
       priority: 35
@@ -270,16 +273,13 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: 
-      template: obsidian
+    content: {}
     folder:
-      template: obsidian
       exclude:
         - reader-mode
       positions:
         right: []
     tag:
-      template: obsidian
       exclude:
         - reader-mode
       positions:
