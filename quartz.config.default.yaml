@@ -115,7 +115,7 @@ plugins:
     enabled: true
     options:
       enableSiteMap: true
-      enableRSS: false
+      enableRSS: true
   - source: "@quartz-community/favicon"
     enabled: true
   - source: "@quartz-community/og-image"
@@ -269,8 +269,7 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: 
-      template: default
+    content: {}
     folder:
       exclude:
         - reader-mode
@@ -282,6 +281,5 @@ layout:
       positions:
         right: []
     canvas: 
-      template: default
-    bases: 
-      template: default
+      template: {}
+    bases: {}
