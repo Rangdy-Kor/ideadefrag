@@ -1,0 +1,21 @@
+views:
+  - type: table
+    name: 표
+    filters:
+      and:
+        - parent.contains(link("🧩 index", "🧩 아이디어 조각모음"))
+        - file.tags.contains("Meta")
+    order:
+      - file.name
+      - order
+      - file.tags
+      - file.ctime
+      - file.mtime
+    sort:
+      - property: order
+        direction: ASC
+    summaries: {}
+    separator: ""
+    indentProperties: true
+    imageAspectRatio: 0.5
+    columnSize: {}
