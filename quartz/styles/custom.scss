@@ -1,3 +1,30 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+
+@font-face {
+  font-family: "PretendardJPVariable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/static/PretendardJPVariable.woff2");
+}
+
+@font-face {
+  font-family: "D2CodingLigature";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/static/D2CodingLigatureRegular.woff2");
+}
+
+@font-face {
+  font-family: "D2CodingLigature";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/static/D2CodingLigatureBold.woff2");
+}
+
+p {
+  text-align: justify;
+}
