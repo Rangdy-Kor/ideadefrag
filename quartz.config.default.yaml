@@ -269,13 +269,16 @@ layout:
         beforeBody: []
         left: []
         right: []
-    content: {}
+    content: 
+      template: obsidian
     folder:
+      template: obsidian
       exclude:
         - reader-mode
       positions:
         right: []
     tag:
+      template: obsidian
       exclude:
         - reader-mode
       positions:
