@@ -258,6 +258,7 @@ plugins:
       priority: 50
       display: all
 layout:
+  template: obsidian
   groups:
     toolbar:
       priority: 35
