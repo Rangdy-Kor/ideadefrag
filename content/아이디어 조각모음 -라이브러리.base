@@ -3,7 +3,7 @@ views:
     name: 표
     filters:
       and:
-        - parent.contains(link("🧩 index", "🧩 아이디어 조각모음"))
+        - parent.contains(link("index", "🧩 아이디어 조각모음"))
         - file.tags.contains("Meta")
     order:
       - file.name
