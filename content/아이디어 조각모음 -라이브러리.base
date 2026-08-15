@@ -7,7 +7,6 @@ views:
         - file.tags.contains("Meta")
     order:
       - file.name
-      - order
       - file.tags
       - file.ctime
       - file.mtime
