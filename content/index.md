@@ -1,7 +1,5 @@
 ---
 publish: true
-aliases:
-  - 🧩 아이디어 조각모음
 title: 🧩 아이디어 조각모음
 tags:
   - Meta
