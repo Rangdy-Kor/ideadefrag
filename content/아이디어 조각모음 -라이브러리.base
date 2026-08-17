@@ -3,7 +3,7 @@ views:
     name: 카드
     filters:
       and:
-        - parent.contains(link("index"))
+        - parent.contains("[[index]]")
     order:
       - file.name
       - file.ctime
