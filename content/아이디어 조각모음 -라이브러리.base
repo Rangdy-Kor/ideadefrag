@@ -1,11 +1,13 @@
 views:
   - type: cards
     name: 카드
+    filters:
+      and:
+        - parent == ["[[index]]"]
     order:
       - file.name
       - file.ctime
       - file.mtime
-      - parent
     sort:
       - property: order
         direction: ASC
