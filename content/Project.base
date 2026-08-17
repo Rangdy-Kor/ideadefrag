@@ -3,7 +3,7 @@ views:
     name: 표
     filters:
       and:
-        - parent == link("🗂️ Project")
+        - up == link("🗂️ Project")
     order:
       - file.name
       - file.ctime
