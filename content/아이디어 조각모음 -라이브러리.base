@@ -1,13 +1,11 @@
 views:
-  - type: table
-    name: 표
+  - type: cards
+    name: 카드
     filters:
       and:
         - parent == ["[[index]]"]
-        - file.tags.contains("Meta")
     order:
       - file.name
-      - file.tags
       - file.ctime
       - file.mtime
     sort:
@@ -18,3 +16,4 @@ views:
     indentProperties: true
     imageAspectRatio: 0.5
     columnSize: {}
+    cardSize: 400

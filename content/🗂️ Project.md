@@ -1,7 +1,5 @@
 ---
 publish: true
-tags:
-  - Meta
 ---
 
 # 🗂️ Project

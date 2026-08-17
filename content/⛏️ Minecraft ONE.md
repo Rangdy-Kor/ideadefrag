@@ -1,7 +1,5 @@
 ---
 publish: true
-tags:
-  - Featured
 ---
 
 # ⛏️ Minecraft: ONE
@@ -30,4 +28,10 @@ Minecraft: ONE 의 목적은 하나이다. Java Edition 의 개방성과 예측 
 
 ### 🧑‍💻 엔진 설계
 
-Minecraft: ONE 은 Bedrock Engine 의 아키텍처 설계 원칙, 즉 크로스 플랫폼 호환성, 성능 최적화, 모듈화를 계승한 차세대 엔진, 가칭 NEO (Native Executable ) Engine 을 사용한다. Bedrock Engine 은 Bedrock Edition 에서 사용된 전례가 있으며, 모바일 / 콘솔 플랫폼 지원을 가능케한 핵심적인 엔진이다. 그러나 추후 서술할 Minecraft: ONE 이 요구하는 아키텍처 변화에 대응하기 위해서는
+Minecraft: ONE 은 Bedrock Engine 의 아키텍처 설계 원칙, 즉 크로스 플랫폼 호환성, 성능 최적화, 모듈화를 계승한 차세대 엔진 (가칭 Native Executable Open, NEO Engine) 을 사용한다. Bedrock Engine 은 Bedrock Edition 에서 사용된 전례가 있으며, 모바일 / 콘솔 플랫폼 대응을 가능케한 핵심적인 엔진이다. 그러나 추후 서술할 아키텍처 변화에 대응하기 위해서는 근본적인 재구성이 필요하다 판단하였다.
+
+그래픽 렌더링과 물리 엔진 개발에는 Bedrock Edition 과 마찬가지로 C++ 을 채택한다. 해당 영역은 게임의 성능과 직결되는 영역이므로 비관리형 저수준 언어가 적합하다 판단하였다. C++ 은 개발자가 메모리를 직접 제어하는 경로를 지원하므로 기타 관리형 언어로는 쉽지 않은 네이티브 최적화와 예측 가능한 실행 특성을 제공한다.
+
+C++ 을 사용 시 비정상 종료와 데이터 손상을 유발할 수 있는 치명적인 메모리 오류들이 개발자의 실수로 발생할 수 있다는 점을 인지하고 있다. 이를 방지하기 위하여 RAII (Resource Acquisition Is Initialization) 메모리 관리 정책을 적용한다.
+
+Minecraft 는 방대한 양의 컴포넌트가 지속적으로 생성 / 삭제되는 구조이므로 ECS 컴포넌트, 청크 데이터, 네트워크 패킷 버퍼와 같이 자주 생성 / 소멸되는 객체에는 전용 메모리 풀과 커스텀 얼로케이터를 도입한다.
