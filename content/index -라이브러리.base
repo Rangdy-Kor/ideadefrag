@@ -3,7 +3,7 @@ views:
     name: 카드
     filters:
       and:
-        - parent == ["[[index]]"]
+        - list(parent).contains(this)
     order:
       - file.name
       - file.mtime
