@@ -1,0 +1,19 @@
+views:
+  - type: cards
+    name: 카드
+    filters:
+      and:
+        - parent == ["[[index]]"]
+    order:
+      - file.name
+      - file.mtime
+      - file.ctime
+    sort:
+      - property: order
+        direction: ASC
+    summaries: {}
+    separator: ""
+    indentProperties: true
+    imageAspectRatio: 0.5
+    columnSize: {}
+    cardSize: 400
