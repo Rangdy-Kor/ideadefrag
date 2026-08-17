@@ -2,9 +2,8 @@ views:
   - type: cards
     name: 카드
     filters:
-      or:
-        - parent.contains(link("index"))
-        - parent.contains(link("🧩 아이디어 조각모음"))
+      and:
+        - parent == link("index")
     order:
       - file.name
       - file.ctime
