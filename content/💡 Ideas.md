@@ -4,4 +4,5 @@ publish: true
 
 # 💡 Ideas
 
-![[Ideas.base]]
+| 페이지 | 수정일 | 생성일 |
+| --- | --- | --- |
