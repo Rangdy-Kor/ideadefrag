@@ -5,6 +5,7 @@ views:
       - file.name
       - file.ctime
       - file.mtime
+      - parent
     sort:
       - property: order
         direction: ASC
