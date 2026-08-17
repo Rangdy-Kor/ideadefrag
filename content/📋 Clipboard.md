@@ -5,3 +5,5 @@ tags:
 ---
 
 # 📋 Clipboard
+
+![[Clipboard.base]]

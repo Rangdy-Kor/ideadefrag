@@ -1,15 +1,18 @@
 views:
-  - type: cards
-    name: 카드
+  - type: table
+    name: 표
     filters:
       and:
-        - file.tags.contains("Featured")
+        - parent.contains(link("📋 Clipboard"))
     order:
       - file.name
-      - file.tags
       - file.ctime
       - file.mtime
     sort:
       - property: file.mtime
         direction: DESC
+    summaries: {}
+    separator: ""
+    indentProperties: true
     imageAspectRatio: 0.5
+    columnSize: {}
